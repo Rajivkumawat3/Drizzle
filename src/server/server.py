@@ -12,8 +12,9 @@ server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 server_socket.bind((IP, PORT))
 server_socket.listen()
 sockets_list = [server_socket]
+
 # uname -> addr: (IP, PORT)
-clients = {}
+clients: dict[str, tuple[str, int]] = {}
 def receive_msg(client_socket):
     message_type = client_socket.recv(HEADER_TYPE_LEN).decode(FMT)
     if not len(message_type):

@@ -20,7 +20,8 @@ def get_self_ip() -> str:
     str
         IP address of this client
     """
-    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    # udp
+    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)  
     s.settimeout(0)
     try:
         s.connect(("1.1.1.1", 1))
@@ -149,6 +150,7 @@ def recvall(peer_socket: socket.socket, length: int) -> bytes:
     return data
 
 
+# It sends a structured list of your shared files/folders to the server so that others (clients) can see or request those files.
 def update_share_data(share_folder_path: Path, client_send_socket: socket.socket):
     """Utility to send new share folder data to the server.
 

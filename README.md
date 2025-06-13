@@ -1,12 +1,12 @@
 # Drizzle
 
-<!-- 
+
 _Drizzle is a lightweight file-sharing and messaging platform inspired by DC++._\
 [See the feature list](https://github.com/hs2361/Drizzle/edit/gui/README.md#features)
 
 [Demonstration Video (file)](./docs/media/Drizzle_Final.mp4)
 
-https://user-images.githubusercontent.com/56076061/154854653-22287ddf-0cdd-4334-b60b-21f8c1c12f9d.mp4 -->
+https://user-images.githubusercontent.com/56076061/154854653-22287ddf-0cdd-4334-b60b-21f8c1c12f9d.mp4
 
 ## Technologies Used
 
@@ -24,18 +24,18 @@ Drizzle is inspired by the DC++ project, a popular file sharing application. Thi
 
 View all users on the network, whether they are online or not, and when they were last active.
 
-<!-- ### Chat (P2P) 💬
+### Chat (P2P) 💬
 
 Drizzle provides a fast, peer-to-peer private messaging service.
 
 ### Direct File Transfer (P2P) 📄
 
-Send files directly to other users on the network. For security purposes, recepients are able to choose whether or not to receive such files. -->
+Send files directly to other users on the network. For security purposes, recepients are able to choose whether or not to receive such files.
 
 ### Browsing and Search 🔍
 
 Easily browse through available files and directories for online users. Looking for something specific but don't know who has the file? Drizzle lets you search the entire network for files and directories.
-<!-- 
+
 ### Download Files and Folders (P2P) 💾
 
 Select files and even entire directories of your choice and download them onto your computer. Drizzle will make a direct connection with the owner of the file and begin the download.
@@ -48,7 +48,7 @@ Going offline? Drizzle will save your progress between sessions so you can resta
 
 ### Corruption Detection and Tamper-proofing ⚠️
 
-The Drizzle server keeps track of file hashes for medium and large files. When you download such files, Drizzle will calculate the hash on the received data and perform an integrity check to ensure the file was not corrupted or tampered with during the transfer. -->
+The Drizzle server keeps track of file hashes for medium and large files. When you download such files, Drizzle will calculate the hash on the received data and perform an integrity check to ensure the file was not corrupted or tampered with during the transfer.
 
 ### Share Only What You Want To ✅
 
@@ -57,17 +57,17 @@ Drizzle works with a designated `Share Folder` that contains the files and folde
 ### Storage Optimisation ⚡
 
 Adding new shareable files into the `Share Folder` by means of copying them is not ideal and leads to unnecessary usage of disk space. Drizzle lets you import files and folders into your `Share Folder` by making `Symbolic Links` to save your disk storage.
-<!-- 
+
 ### Desktop Notifications 🚨
 
-Get notified if you receive a message or when a file is done downloading. (Of course, you can turn these off) -->
+Get notified if you receive a message or when a file is done downloading. (Of course, you can turn these off)
 
 ## Installation
 
 Clone this repository
 
 ```sh
-git clone https://github.com/rajivkumawat3/Drizzle.git
+git clone https://github.com/hs2361/Drizzle.git
 cd Drizzle
 ```
 
@@ -95,7 +95,7 @@ The server will display a line on startup with the IP assigned to it. Use this I
 ```
 SERVER IP: xxx.xxx.xxx.xxx
 ```
-<!-- 
+
 ### Client Setup
 
 The server needs to be run on only one computer on the network.
@@ -111,7 +111,7 @@ python app.py
 # ensure that python is using version 3.10 or higher
 ```
 
---- -->
+---
 
 ### Install And Run With Pipenv
 
@@ -127,22 +127,22 @@ cd src/server
 pipenv install
 pipenv run python server.py
 ```
-<!-- 
+
 **Client:**
 
 ```sh
 cd src/client
 pipenv install
 pipenv run python app.py
-``` -->
+```
 
-<!-- > Note: Running the app inside a pipenv may prevent it from accessing the OS's active theme and may use some default styling. -->
+> Note: Running the app inside a pipenv may prevent it from accessing the OS's active theme and may use some default styling.
 
-<!-- ## Platform Support
+## Platform Support
 
-### GNU/Linux -->
+### GNU/Linux
 
-<!-- **Complete feature support.** All functionalities should work as intended on a Linux machine and between Linux peers.
+**Complete feature support.** All functionalities should work as intended on a Linux machine and between Linux peers.
 
 ### Windows, OS-X
 
@@ -155,7 +155,7 @@ You may notice some problems when using peers running Windows or OS-X. Some know
 
 ## Architecture
 
-Drizzle uses a hybrid architecture, utilizing both peer-too-peer and client-server patterns. -->
+Drizzle uses a hybrid architecture, utilizing both peer-too-peer and client-server patterns.
 
 ### The Server
 
@@ -174,7 +174,7 @@ A client-server communication happens for the following usecases:
 -   Obtain share folder data for a user
 -   Get file search results for the network
 -   Update file hashes on server
-<!-- 
+
 ### Peer-To-Peer Communication
 
 Peers on the network discover each other (in terms of usernames and IPs) through the server. Once this data is received, however, peer-to-peer connections can be established as and when required. Thus, many of the succeeding functionalities are handled directly between the peers:
@@ -194,4 +194,4 @@ Peers on the network discover each other (in terms of usernames and IPs) through
 ![Item Downloading](./docs/media/downloading.png)
 ![User Consent Dialog](./docs/media/user_ack.png)
 ![Accepted File Download Successful](./docs/media/acked.png)
- -->
+

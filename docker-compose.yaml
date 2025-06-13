@@ -1,0 +1,37 @@
+services:
+  server:
+    build:
+      context: ./src/
+      dockerfile: server.dockerfile
+    ports:
+      - "1234:1234"
+    network_mode: host
+    volumes:
+      - ./logs:/logs:rw
+      - ./db:/Drizzle/db:rw
+
+  client:
+    build:
+      context: ./src/
+      dockerfile: client.dockerfile
+    ports:
+      - "1234:1234"
+      - "4321:4321"
+    network_mode: host
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    volumes:
+      - ./logs:/logs:rw
+      - ./downloads:/Drizzle/downloads:rw
+      - ./tmp:/Drizzle/tmp:rw
+      - ./db:/Drizzle/db:rw
+      - "$HOME/.Xauthority:/root/.Xauthority:rw"
+    environment:
+      - DISPLAY
+
+networks:
+  # lan:
+  #   name: lan
+  #   driver: bridge
+  default:
+    name: host

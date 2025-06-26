@@ -2,7 +2,6 @@
 
 
 _Drizzle is a lightweight file-sharing and messaging platform inspired by DC++._\
-[See the feature list](https://github.com/hs2361/Drizzle/edit/gui/README.md#features)
 
 [Demonstration Video (file)](./docs/media/Drizzle_Final.mp4)
 
